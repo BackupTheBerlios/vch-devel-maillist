@@ -1,0 +1,78 @@
+From admin at berlios.de  Tue Jun  3 20:25:30 2008
+From: admin at berlios.de (admin at berlios.de)
+Date: Tue, 03 Jun 2008 18:25:30 -0000
+Subject: [Vch-devel] [Feature #4172] Parse 3sat rss-feeds
+Message-ID: <200806031825.m53IPRWW009414@unicorn.berlios.de>
+
+Feature Request #4172, was updated on 2008-Jun-03 20:25
+You can respond by visiting: 
+http://developer.berlios.de/feature/?func=detailfeature&feature_id=4172&group_id=9242
+
+Category: None
+Status: Open
+Priority: 5
+Summary: Parse 3sat rss-feeds
+
+By: hampelratte
+Date: 2008-Jun-03 20:25
+
+Message:
+Logged In: YES 
+user_id=18663
+Browser: Mozilla/5.0 (X11; U; Linux i686; de; rv:1.8.1.14) Gecko/20080531 Firefox/2.0.0.14
+
+Auf http://www.3sat.de/mediathek/mediathek.php?mode=rss
+gibts ne Liste von RSS feeds mit yahoo media:content
+tags. Die kann man mit ROME parsen und dann in unser
+Modell konvertieren (Rome2Model). Dazu m?sste man den
+Konverter erweitern, so dass media:content in ein
+enclosure umgewandelt wird.
+
+Das sollte relativ generisch gemacht werden, da auch
+die ARD mediathek RSS feeds enth?lt, die so geparsed
+werden k?nnten.
+
+----------------------------------------------------------------------
+You can respond by visiting: 
+http://developer.berlios.de/feature/?func=detailfeature&feature_id=4172&group_id=9242
+
+
+From admin at berlios.de  Wed Jun  4 19:11:59 2008
+From: admin at berlios.de (admin at berlios.de)
+Date: Wed, 04 Jun 2008 17:11:59 -0000
+Subject: [Vch-devel] [Feature #4172] Parse 3sat rss-feeds
+Message-ID: <200806041711.m54HBwRQ018715@unicorn.berlios.de>
+
+Feature Request #4172, was updated on 2008-Jun-03 20:25
+You can respond by visiting: 
+http://developer.berlios.de/feature/?func=detailfeature&feature_id=4172&group_id=9242
+
+Category: None
+Status: Closed
+Priority: 5
+Summary: Parse 3sat rss-feeds
+
+By: hampelratte
+Date: 2008-Jun-03 20:25
+
+Message:
+Logged In: YES 
+user_id=18663
+Browser: Mozilla/5.0 (X11; U; Linux i686; de; rv:1.8.1.14) Gecko/20080531 Firefox/2.0.0.14
+
+Auf http://www.3sat.de/mediathek/mediathek.php?mode=rss
+gibts ne Liste von RSS feeds mit yahoo media:content
+tags. Die kann man mit ROME parsen und dann in unser
+Modell konvertieren (Rome2Model). Dazu m?sste man den
+Konverter erweitern, so dass media:content in ein
+enclosure umgewandelt wird.
+
+Das sollte relativ generisch gemacht werden, da auch
+die ARD mediathek RSS feeds enth?lt, die so geparsed
+werden k?nnten.
+
+----------------------------------------------------------------------
+You can respond by visiting: 
+http://developer.berlios.de/feature/?func=detailfeature&feature_id=4172&group_id=9242
+
+

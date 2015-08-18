@@ -1,0 +1,144 @@
+From uli-be at uli-eckhardt.de  Mon Jan  4 19:33:38 2010
+From: uli-be at uli-eckhardt.de (Ulrich Eckhardt)
+Date: Mon, 04 Jan 2010 19:33:38 +0100
+Subject: [Vch-devel] Probleme mit ZDF-Mediathek
+Message-ID: <4B423482.1000800@uli-eckhardt.de>
+
+Hallo,
+
+seit Anfang November gibt es f?r die ZDF-Mediathek keine Updates mehr. 
+Der Vodcatcher-Helper gibt folgende Fehlermeldung aus:
+  04.01.2010 16:06:27 de.berlios.vch.parser.zdfmediathek.RSSLinkGetter 
+<init>
+SCHWERWIEGEND:
+java.io.FileNotFoundException: http://www.zdf.de/ZDFmediathek/inhalt
+         at 
+sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1267)
+         at 
+de.berlios.vch.parser.zdfmediathek.RSSLinkGetter.<init>(RSSLinkGetter.java:39)
+         at 
+de.berlios.vch.parser.zdfmediathek.ZDFMediathekParser.run(ZDFMediathekParser.java:25)
+         at java.lang.Thread.run(Thread.java:636)
+04.01.2010 16:06:27 
+de.berlios.vch.parser.zdfmediathek.ZDFMediathekParser run
+
+Ruft man den URL http://www.zdf.de/ZDFmediathek/inhalt auf, so bekommt 
+man nur eine Fehlermeldung.
+
+Jetzt wollte ich mal schauen, ob ich da die ge?nderte URL finde (meine 
+Vermutung:
+http://www.zdf.de/ZDFmediathek/hauptnavigation/startseite?flash=off).
+Ich habe mir den Source aus dem svn gezogen. Nur bricht beim Build maven 
+dann irgendwann mit folgender Fehlermeldung ab:
+
+ 
+
+[INFO] Unable to find resource 'org.hampelratte:rtmp4j:jar:0.1' in 
+repository maven (http://repo1.maven.org/maven2)
+Downloading: 
+http://repository.codehaus.org/org/hampelratte/rtmp4j/0.1/rtmp4j-0.1.jar 
+
+[INFO] Unable to find resource 'org.hampelratte:rtmp4j:jar:0.1' in 
+repository codehaus (http://repository.codehaus.org)
+Downloading: 
+http://dist.wso2.org/maven2/org/hampelratte/rtmp4j/0.1/rtmp4j-0.1.jar 
+
+[INFO] Unable to find resource 'org.hampelratte:rtmp4j:jar:0.1' in 
+repository wso2.org (http://dist.wso2.org/maven2)
+Downloading: 
+http://repo1.maven.org/maven2/org/hampelratte/rtmp4j/0.1/rtmp4j-0.1.jar 
+
+[INFO] Unable to find resource 'org.hampelratte:rtmp4j:jar:0.1' in 
+repository central (http://repo1.maven.org/maven2)
+ 
+
+ 
+
+[INFO] 
+------------------------------------------------------------------------ 
+
+[ERROR] BUILD ERROR 
+
+[INFO] 
+------------------------------------------------------------------------ 
+
+[INFO] Failed to resolve artifact. 
+
+
+Missing:
+----------
+1) org.hampelratte:svdrp4j:jar:0.1
+
+   Try downloading the file manually from the project website.
+
+   Then, install it using the command:
+       mvn install:install-file -DgroupId=org.hampelratte 
+-DartifactId=svdrp4j -Dversion=0.1 -Dpackaging=jar -Dfile=/path/to/file
+
+   Alternatively, if you host your own repository you can deploy the 
+file there:
+       mvn deploy:deploy-file -DgroupId=org.hampelratte 
+-DartifactId=svdrp4j -Dversion=0.1 -Dpackaging=jar -Dfile=/path/to/file 
+-Durl=[url] -DrepositoryId=[id] 
+
+
+   Path to dependency:
+         1) de.berlios.vch:vodcatcherhelper:jar:0.6
+         2) org.hampelratte:svdrp4j:jar:0.1
+
+2) org.hampelratte:mms4j:jar:1.1
+
+   Try downloading the file manually from the project website.
+
+   Then, install it using the command:
+       mvn install:install-file -DgroupId=org.hampelratte 
+-DartifactId=mms4j -Dversion=1.1 -Dpackaging=jar -Dfile=/path/to/file
+
+   Alternatively, if you host your own repository you can deploy the 
+file there:
+       mvn deploy:deploy-file -DgroupId=org.hampelratte 
+-DartifactId=mms4j -Dversion=1.1 -Dpackaging=jar -Dfile=/path/to/file 
+-Durl=[url] -DrepositoryId=[id] 
+
+
+   Path to dependency:
+         1) de.berlios.vch:vodcatcherhelper:jar:0.6
+         2) org.hampelratte:mms4j:jar:1.1
+
+3) org.hampelratte:rtmp4j:jar:0.1
+
+   Try downloading the file manually from the project website.
+
+   Then, install it using the command:
+       mvn install:install-file -DgroupId=org.hampelratte 
+-DartifactId=rtmp4j -Dversion=0.1 -Dpackaging=jar -Dfile=/path/to/file
+
+   Alternatively, if you host your own repository you can deploy the 
+file there:
+       mvn deploy:deploy-file -DgroupId=org.hampelratte 
+-DartifactId=rtmp4j -Dversion=0.1 -Dpackaging=jar -Dfile=/path/to/file 
+-Durl=[url] -DrepositoryId=[id] 
+
+
+   Path to dependency:
+         1) de.berlios.vch:vodcatcherhelper:jar:0.6
+         2) org.hampelratte:rtmp4j:jar:0.1
+
+----------
+3 required artifacts are missing.
+
+for artifact:
+   de.berlios.vch:vodcatcherhelper:jar:0.6
+
+
+Fehlt da noch etwas oder brauche ich da noch anderen Code?
+
+Viele Gr??e
+Uli
+-- 
+Ulrich Eckhardt                  http://www.uli-eckhardt.de
+
+Ein Blitzableiter auf dem Kirchturm ist das denkbar st?rkste
+Misstrauensvotum gegen den lieben Gott. (Karl Krauss)
+
+

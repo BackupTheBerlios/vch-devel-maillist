@@ -1,0 +1,62 @@
+From admin at berlios.de  Sat Mar 13 17:38:35 2010
+From: admin at berlios.de (admin at berlios.de)
+Date: Sat, 13 Mar 2010 17:38:35 +0100 (CET)
+Subject: [Vch-devel] [Feature #4966] Menupunkte per Nummerntasten
+Message-ID: <201003131638.o2DGcZtf021543@unicorn.berlios.de>
+
+Feature Request #4966, was updated on 2010-Mar-13 17:38
+You can respond by visiting: 
+http://developer.berlios.de/feature/?func=detailfeature&feature_id=4966&group_id=9242
+
+Category: None
+Status: Open
+Priority: 5
+Summary: Menupunkte per Nummerntasten
+
+By: hampelratte
+Date: 2010-Mar-13 17:38
+
+Message:
+Logged In: YES 
+user_id=18663
+Browser: Mozilla/5.0 (X11; U; Linux i686; de; rv:1.9.2) Gecko/20100207 Gentoo Firefox/3.6
+
+Im osdserver die Menupunkte mit den Nummerntasten
+verbinden, damit direkt springen kann.
+
+----------------------------------------------------------------------
+You can respond by visiting: 
+http://developer.berlios.de/feature/?func=detailfeature&feature_id=4966&group_id=9242
+
+
+From admin at berlios.de  Sat Mar 13 17:38:46 2010
+From: admin at berlios.de (admin at berlios.de)
+Date: Sat, 13 Mar 2010 17:38:46 +0100 (CET)
+Subject: [Vch-devel] [Feature #4966] Menupunkte per Nummerntasten
+Message-ID: <201003131638.o2DGckx3021553@unicorn.berlios.de>
+
+Feature Request #4966, was updated on 2010-Mar-13 17:38
+You can respond by visiting: 
+http://developer.berlios.de/feature/?func=detailfeature&feature_id=4966&group_id=9242
+
+Category: None
+Status: Open
+Priority: 1
+Summary: Menupunkte per Nummerntasten
+
+By: hampelratte
+Date: 2010-Mar-13 17:38
+
+Message:
+Logged In: YES 
+user_id=18663
+Browser: Mozilla/5.0 (X11; U; Linux i686; de; rv:1.9.2) Gecko/20100207 Gentoo Firefox/3.6
+
+Im osdserver die Menupunkte mit den Nummerntasten
+verbinden, damit direkt springen kann.
+
+----------------------------------------------------------------------
+You can respond by visiting: 
+http://developer.berlios.de/feature/?func=detailfeature&feature_id=4966&group_id=9242
+
+

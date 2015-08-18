@@ -1,0 +1,160 @@
+From admin at berlios.de  Tue May 13 20:15:45 2008
+From: admin at berlios.de (admin at berlios.de)
+Date: Tue, 13 May 2008 18:15:45 -0000
+Subject: [Feature #4149] Parser für die ARD Mediathek
+Message-ID: <200805131815.m4DIFfrF009518@unicorn.berlios.de>
+
+Feature Request #4149, was updated on 2008-May-13 20:15
+You can respond by visiting: 
+http://developer.berlios.de/feature/?func=detailfeature&feature_id=4149&group_id=9242
+
+Category: None
+Status: Open
+Priority: 5
+Summary: Parser f?r die ARD Mediathek
+
+By: hampelratte
+Date: 2008-May-13 20:15
+
+Message:
+Logged In: YES 
+user_id=18663
+Browser: Mozilla/5.0 (X11; U; Linux i686; de; rv:1.8.1.14) Gecko/20080418 Firefox/2.0.0.14
+
+Parser f?r die ARD Mediathek
+http://www.ardmediathek.de
+
+----------------------------------------------------------------------
+You can respond by visiting: 
+http://developer.berlios.de/feature/?func=detailfeature&feature_id=4149&group_id=9242
+
+
+From admin at berlios.de  Wed May 14 17:25:47 2008
+From: admin at berlios.de (admin at berlios.de)
+Date: Wed, 14 May 2008 15:25:47 -0000
+Subject: [Feature #4149] Parser für die ARD Mediathek
+Message-ID: <200805141525.m4EFPkGn012201@unicorn.berlios.de>
+
+Feature Request #4149, was updated on 2008-May-13 20:15
+You can respond by visiting: 
+http://developer.berlios.de/feature/?func=detailfeature&feature_id=4149&group_id=9242
+
+Category: None
+Status: Open
+Priority: 5
+Summary: Parser f?r die ARD Mediathek
+
+By: hampelratte
+Date: 2008-May-13 20:15
+
+Message:
+Logged In: YES 
+user_id=18663
+Browser: Mozilla/5.0 (X11; U; Linux i686; de; rv:1.8.1.14) Gecko/20080418 Firefox/2.0.0.14
+
+Parser f?r die ARD Mediathek
+http://www.ardmediathek.de
+
+----------------------------------------------------------------------
+You can respond by visiting: 
+http://developer.berlios.de/feature/?func=detailfeature&feature_id=4149&group_id=9242
+
+
+From admin at berlios.de  Fri May 23 20:07:07 2008
+From: admin at berlios.de (admin at berlios.de)
+Date: Fri, 23 May 2008 18:07:07 -0000
+Subject: [Feature #4149] Parser für die ARD Mediathek
+Message-ID: <200805231807.m4NI76mY012663@unicorn.berlios.de>
+
+Feature Request #4149, was updated on 2008-May-13 20:15
+You can respond by visiting: 
+http://developer.berlios.de/feature/?func=detailfeature&feature_id=4149&group_id=9242
+
+Category: None
+Status: Closed
+Priority: 5
+Summary: Parser f?r die ARD Mediathek
+
+By: hampelratte
+Date: 2008-May-23 20:07
+
+Message:
+Logged In: YES 
+user_id=18663
+Browser: Mozilla/5.0 (X11; U; Linux i686; de; rv:1.8.1.14) Gecko/20080514 Firefox/2.0.0.14
+
+Die Mediathek ist relativ unstrukturiert. Im Moment werden
+die Kategorien geparst und die einzelnen Clips dann in
+einzelne Feeds eingeordnet. Da man nicht wei?, wie viele
+Clips noch zu einem Feed hinzukommen wird relativ viel im
+Speicher gehalten.
+
+Falls es Beschwerden ?ber den Speicherverbrauch gibt:
+Man k?nnte in den Kategorien nach Sendungen suchen und dann
+Sendung f?r Sendung parsen. Das sollte den Speicherverbrauch
+verringern.
+
+----------------------------------------------------------------------
+
+By: hampelratte
+Date: 2008-May-13 20:15
+
+Message:
+Logged In: YES 
+user_id=18663
+Browser: Mozilla/5.0 (X11; U; Linux i686; de; rv:1.8.1.14) Gecko/20080418 Firefox/2.0.0.14
+
+Parser f?r die ARD Mediathek
+http://www.ardmediathek.de
+
+----------------------------------------------------------------------
+You can respond by visiting: 
+http://developer.berlios.de/feature/?func=detailfeature&feature_id=4149&group_id=9242
+
+
+From admin at berlios.de  Sat May 31 16:36:57 2008
+From: admin at berlios.de (admin at berlios.de)
+Date: Sat, 31 May 2008 14:36:57 -0000
+Subject: [Vch-devel] [Feature #4082] http://www.southparkstudios.com Parser
+Message-ID: <200805311436.m4VEavd3011307@unicorn.berlios.de>
+
+Feature Request #4082, was updated on 2008-Mar-25 22:09
+You can respond by visiting: 
+http://developer.berlios.de/feature/?func=detailfeature&feature_id=4082&group_id=9242
+
+Category: None
+Status: Open
+Priority: 5
+Summary: http://www.southparkstudios.com Parser
+
+By: hampelratte
+Date: 2008-May-31 16:36
+
+Message:
+Logged In: YES 
+user_id=18663
+Browser: Mozilla/5.0 (X11; U; Linux i686; de; rv:1.8.1.14) Gecko/20080531 Firefox/2.0.0.14
+
+Als Alternative bietet sich http://allsp.com/ an. Hier gibt
+es scheinbar auch alle Episoden. Die Dateien werden als flv
+?ber http gestreamt, haben allerdings eine schlechtere Qualit?t.
+
+----------------------------------------------------------------------
+
+By: hampelratte
+Date: 2008-Apr-02 00:04
+
+Message:
+Logged In: YES 
+user_id=18663
+Browser: Mozilla/5.0 (X11; U; Linux i686; de; rv:1.8.1.13) Gecko/20080330 Firefox/2.0.0.13
+
+http://osflash.org/red5
+hier gibt es einen flash server der wohl auch rtmp versteht.
+eventuell gibt es da auch was f?r die client-seite...
+
+----------------------------------------------------------------------
+You can respond by visiting: 
+http://developer.berlios.de/feature/?func=detailfeature&feature_id=4082&group_id=9242
+
+

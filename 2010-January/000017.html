@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Vch-devel] Probleme mit ZDF-Mediathek
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/vch-devel/2010-January/index.html" >
+   <LINK REL="made" HREF="mailto:vch-devel%40lists.berlios.de?Subject=Re%3A%20%5BVch-devel%5D%20Probleme%20mit%20ZDF-Mediathek&In-Reply-To=%3C4B423482.1000800%40uli-eckhardt.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Vch-devel] Probleme mit ZDF-Mediathek</H1>
+    <B>Ulrich Eckhardt</B> 
+    <A HREF="mailto:vch-devel%40lists.berlios.de?Subject=Re%3A%20%5BVch-devel%5D%20Probleme%20mit%20ZDF-Mediathek&In-Reply-To=%3C4B423482.1000800%40uli-eckhardt.de%3E"
+       TITLE="[Vch-devel] Probleme mit ZDF-Mediathek">uli-be at uli-eckhardt.de
+       </A><BR>
+    <I>Mon Jan  4 19:33:38 CET 2010</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#17">[ date ]</a>
+              <a href="thread.html#17">[ thread ]</a>
+              <a href="subject.html#17">[ subject ]</a>
+              <a href="author.html#17">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hallo,
+
+seit Anfang November gibt es f&#252;r die ZDF-Mediathek keine Updates mehr. 
+Der Vodcatcher-Helper gibt folgende Fehlermeldung aus:
+  04.01.2010 16:06:27 de.berlios.vch.parser.zdfmediathek.RSSLinkGetter 
+&lt;init&gt;
+SCHWERWIEGEND:
+java.io.FileNotFoundException: <A HREF="http://www.zdf.de/ZDFmediathek/inhalt">http://www.zdf.de/ZDFmediathek/inhalt</A>
+         at 
+sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1267)
+         at 
+de.berlios.vch.parser.zdfmediathek.RSSLinkGetter.&lt;init&gt;(RSSLinkGetter.java:39)
+         at 
+de.berlios.vch.parser.zdfmediathek.ZDFMediathekParser.run(ZDFMediathekParser.java:25)
+         at java.lang.Thread.run(Thread.java:636)
+04.01.2010 16:06:27 
+de.berlios.vch.parser.zdfmediathek.ZDFMediathekParser run
+
+Ruft man den URL <A HREF="http://www.zdf.de/ZDFmediathek/inhalt">http://www.zdf.de/ZDFmediathek/inhalt</A> auf, so bekommt 
+man nur eine Fehlermeldung.
+
+Jetzt wollte ich mal schauen, ob ich da die ge&#228;nderte URL finde (meine 
+Vermutung:
+<A HREF="http://www.zdf.de/ZDFmediathek/hauptnavigation/startseite?flash=off">http://www.zdf.de/ZDFmediathek/hauptnavigation/startseite?flash=off</A>).
+Ich habe mir den Source aus dem svn gezogen. Nur bricht beim Build maven 
+dann irgendwann mit folgender Fehlermeldung ab:
+
+ 
+
+[INFO] Unable to find resource 'org.hampelratte:rtmp4j:jar:0.1' in 
+repository maven (<A HREF="http://repo1.maven.org/maven2">http://repo1.maven.org/maven2</A>)
+Downloading: 
+<A HREF="http://repository.codehaus.org/org/hampelratte/rtmp4j/0.1/rtmp4j-0.1.jar">http://repository.codehaus.org/org/hampelratte/rtmp4j/0.1/rtmp4j-0.1.jar</A> 
+
+[INFO] Unable to find resource 'org.hampelratte:rtmp4j:jar:0.1' in 
+repository codehaus (<A HREF="http://repository.codehaus.org">http://repository.codehaus.org</A>)
+Downloading: 
+<A HREF="http://dist.wso2.org/maven2/org/hampelratte/rtmp4j/0.1/rtmp4j-0.1.jar">http://dist.wso2.org/maven2/org/hampelratte/rtmp4j/0.1/rtmp4j-0.1.jar</A> 
+
+[INFO] Unable to find resource 'org.hampelratte:rtmp4j:jar:0.1' in 
+repository wso2.org (<A HREF="http://dist.wso2.org/maven2">http://dist.wso2.org/maven2</A>)
+Downloading: 
+<A HREF="http://repo1.maven.org/maven2/org/hampelratte/rtmp4j/0.1/rtmp4j-0.1.jar">http://repo1.maven.org/maven2/org/hampelratte/rtmp4j/0.1/rtmp4j-0.1.jar</A> 
+
+[INFO] Unable to find resource 'org.hampelratte:rtmp4j:jar:0.1' in 
+repository central (<A HREF="http://repo1.maven.org/maven2">http://repo1.maven.org/maven2</A>)
+ 
+
+ 
+
+[INFO] 
+------------------------------------------------------------------------ 
+
+[ERROR] BUILD ERROR 
+
+[INFO] 
+------------------------------------------------------------------------ 
+
+[INFO] Failed to resolve artifact. 
+
+
+Missing:
+----------
+1) org.hampelratte:svdrp4j:jar:0.1
+
+   Try downloading the file manually from the project website.
+
+   Then, install it using the command:
+       mvn install:install-file -DgroupId=org.hampelratte 
+-DartifactId=svdrp4j -Dversion=0.1 -Dpackaging=jar -Dfile=/path/to/file
+
+   Alternatively, if you host your own repository you can deploy the 
+file there:
+       mvn deploy:deploy-file -DgroupId=org.hampelratte 
+-DartifactId=svdrp4j -Dversion=0.1 -Dpackaging=jar -Dfile=/path/to/file 
+-Durl=[url] -DrepositoryId=[id] 
+
+
+   Path to dependency:
+         1) de.berlios.vch:vodcatcherhelper:jar:0.6
+         2) org.hampelratte:svdrp4j:jar:0.1
+
+2) org.hampelratte:mms4j:jar:1.1
+
+   Try downloading the file manually from the project website.
+
+   Then, install it using the command:
+       mvn install:install-file -DgroupId=org.hampelratte 
+-DartifactId=mms4j -Dversion=1.1 -Dpackaging=jar -Dfile=/path/to/file
+
+   Alternatively, if you host your own repository you can deploy the 
+file there:
+       mvn deploy:deploy-file -DgroupId=org.hampelratte 
+-DartifactId=mms4j -Dversion=1.1 -Dpackaging=jar -Dfile=/path/to/file 
+-Durl=[url] -DrepositoryId=[id] 
+
+
+   Path to dependency:
+         1) de.berlios.vch:vodcatcherhelper:jar:0.6
+         2) org.hampelratte:mms4j:jar:1.1
+
+3) org.hampelratte:rtmp4j:jar:0.1
+
+   Try downloading the file manually from the project website.
+
+   Then, install it using the command:
+       mvn install:install-file -DgroupId=org.hampelratte 
+-DartifactId=rtmp4j -Dversion=0.1 -Dpackaging=jar -Dfile=/path/to/file
+
+   Alternatively, if you host your own repository you can deploy the 
+file there:
+       mvn deploy:deploy-file -DgroupId=org.hampelratte 
+-DartifactId=rtmp4j -Dversion=0.1 -Dpackaging=jar -Dfile=/path/to/file 
+-Durl=[url] -DrepositoryId=[id] 
+
+
+   Path to dependency:
+         1) de.berlios.vch:vodcatcherhelper:jar:0.6
+         2) org.hampelratte:rtmp4j:jar:0.1
+
+----------
+3 required artifacts are missing.
+
+for artifact:
+   de.berlios.vch:vodcatcherhelper:jar:0.6
+
+
+Fehlt da noch etwas oder brauche ich da noch anderen Code?
+
+Viele Gr&#252;&#223;e
+Uli
+-- 
+Ulrich Eckhardt                  <A HREF="http://www.uli-eckhardt.de">http://www.uli-eckhardt.de</A>
+
+Ein Blitzableiter auf dem Kirchturm ist das denkbar st&#228;rkste
+Misstrauensvotum gegen den lieben Gott. (Karl Krauss)
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#17">[ date ]</a>
+              <a href="thread.html#17">[ thread ]</a>
+              <a href="subject.html#17">[ subject ]</a>
+              <a href="author.html#17">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/vch-devel">More information about the Vch-devel
+mailing list</a><br>
+</body></html>
